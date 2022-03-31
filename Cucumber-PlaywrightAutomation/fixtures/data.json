@@ -1,0 +1,33 @@
+{
+	"userAccount": {
+		"wlkjfsh": {
+			"username": "admin@2021021-dev",
+			"password": "tftbroadvoice",
+			"name": "System Administrator"
+		},
+		"Agent": {
+			"username": "admin@2021021-dev",
+			"password": "tftbroadvoice",
+			"name": ""
+		},
+		"admin": {
+			"firstname": "muthu",
+			"lastname": "pandi",
+			"email": "muthu@gmail.com"
+		},
+		"admin_2": {
+			"username": "muthupandi261999@gmail.com",
+			"password": "muthu@2699",
+			"name": ""
+		},
+		"Ankur":{
+			"username": "Ankur_tftUs@2021021-dev",
+			"password": "9AS5ywaz*cIBLR*e"
+		}
+	},
+	"userData": {
+		"queue": "VTTicketQueue",
+		"attachment": "a.jpg"
+	}
+
+}

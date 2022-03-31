@@ -1,0 +1,21 @@
+{
+  "name": "Go Contact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --require cucumber.js --require step-definitions/**/*.js --require features/**/*.js --format html:./reports/cucumber_report.html --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet"
+  },
+  "keywords": [],
+  "author": "Ankur Choudhary",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^7.0.0",
+    "@cucumber/pretty-formatter": "^1.0.0-alpha.0",
+    "chai": "^4.2.0",
+    "cucumber-html-reporter": "^5.3.0",
+    "mailosaur": "^8.2.0",
+    "playwright": "^1.8.0",
+    "sinon-chai": "^3.7.0"
+  }
+}
