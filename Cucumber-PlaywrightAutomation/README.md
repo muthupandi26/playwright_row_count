@@ -1,9 +1,6 @@
 This project is a basic framework to write E2E tests with Cucumber-JS v7 and Playwright with Page-Objects in JavaScript language.
 
-# Install --> Inside express folder
-
-  ` npm install `
-  ` npm start `
+# First open Table.html
 
 # Install --> Inside cucumber-playwright automation
   ` npm install `
