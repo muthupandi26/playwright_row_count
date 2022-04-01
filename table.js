@@ -1,5 +1,7 @@
 $(document).ready(function() {
     // Add row
+    let count = $(".table tbody tr").length;
+    console.log(count)
     $("#add-row").click(function() {
         let firstname = $("#firstname").val();
         let lastname = $("#lastname").val();
@@ -13,8 +15,19 @@ $(document).ready(function() {
                 '<td>'+email+'</td>'+
             '</tr>'
         );
+
         let tableSize = $(".table tbody tr").length;
-        // console.log(tableSize)
+        console.log(tableSize)
+        
+        if(tableSize > count){
+            console.log(count)
+            console.log(tableSize);
+            count = tableSize;
+            console.log(count)
+        }
+        console.log(count)
+        console.log(tableSize)
+        
         document.getElementById("count_value").innerHTML = tableSize;
         
     })
@@ -48,7 +61,7 @@ $(document).ready(function() {
             }
         });
         let tableSize = $(".table tbody tr").length;
-        // console.log(tableSize)
+        console.log(tableSize)
         document.getElementById("count_value").innerHTML = tableSize;
     });
     
