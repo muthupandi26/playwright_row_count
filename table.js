@@ -17,16 +17,13 @@ $(document).ready(function() {
         );
 
         let tableSize = $(".table tbody tr").length;
-        console.log(tableSize)
+        // console.log(tableSize)
         
         if(tableSize > count){
-            console.log(count)
-            console.log(tableSize);
+            console.log(count);
             count = tableSize;
             console.log(count)
         }
-        console.log(count)
-        console.log(tableSize)
         
         document.getElementById("count_value").innerHTML = tableSize;
         

@@ -2,7 +2,8 @@ const { assert, expect } = require('chai');
 const { BaseAction } = require('../setup/baseAction');
 const Mailosaur = require('mailosaur')
 
-
+global.count = 1;
+   
 exports.Homepage = class Homepage extends BaseAction {
 
     constructor() {
@@ -12,6 +13,7 @@ exports.Homepage = class Homepage extends BaseAction {
     /**
    * Creating element object for initializing required locators for home page.
    */
+    
     elements = {
         USERNAME_INPUT: '#container-signin input[name="email"]',
         PASSWORD_INPUT: '#container-signin input[name="password"]',
@@ -66,9 +68,21 @@ exports.Homepage = class Homepage extends BaseAction {
     }
 
     async check_inc() {
-        const increased_value = 2;
-        await this.shouldContainTextt(await this.getTextss(this.elements.button_value), increased_value)
+        // if(this.elements.button_value > count)
+        const increased_value = await this.getTextss(this.elements.button_value);
+        if(increased_value > count) {
+            count = increased_value;
+        }
+        //await this.rowIncrement(await this.getTextss(this.elements.button_value), count)
     }
+    async check_dec() {
+        const decreased_value = await this.getTextss(this.elements.button_value);
+        if(decreased_value < count) {
+            count = decreased_value;
+        }
+        //await this.rowDecrement(await this.getTextss(this.elements.button_value), count);
+    }
+
 
     async checkbox() {
         await this.wait(2);
@@ -80,10 +94,6 @@ exports.Homepage = class Homepage extends BaseAction {
         await this.wait(2);
     }
 
-    async check_dec() {
-        const decreased_value = 1;
-        await this.shouldContainTextt(await this.getTextss(this.elements.button_value), decreased_value);
-    }
 
    
     /**

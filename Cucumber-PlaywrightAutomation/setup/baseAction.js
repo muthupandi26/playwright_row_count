@@ -12,16 +12,35 @@ chai.use(require('sinon-chai'));
 
 let defaultTimeout = 60000;
 
+
 exports.BaseAction = class BaseAction {
+
+    async shouldContainTextt(text1, text2) {
+        expect(text1).to.contain(text2);
+    }
 
     async getTextss(locator) {
          await page.locator(locator).isVisible({ timeout: defaultTimeout });
          const textString = await page.locator(locator).innerText();
-        //  console.log(textString)
+        //  console.log(textString);
          return textString;
         }
-    async shouldContainTextt(text1, text2) {
-        expect(text1).to.contain(text2);
+
+    async rowIncrement(text1,count) {
+        console.log(text1,count)
+        if(text1 > count) {
+            count = text1;
+            console.log(text1,count)
+        }
+        console.log(count)
+    }
+      
+    async rowDecrement(text1,count) {
+        console.log(text1, count)
+        if(text1 < count) {
+            count = text1;
+            console.log(count + "asf");
+        }
     }
 
     async type(locator, value) {

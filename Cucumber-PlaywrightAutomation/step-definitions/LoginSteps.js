@@ -13,6 +13,7 @@ Given("User visit the form page", async() => {
 
 When("Enter the {string} details", async(role) => {
     await homepageObj.form_details(login[role])
+    await homepageObj.form_details(login[role])
 })
 
 Then("verify that row value is increase or not", async() => {
